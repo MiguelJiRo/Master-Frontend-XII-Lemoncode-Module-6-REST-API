@@ -19,48 +19,50 @@ import IconButton from '@mui/material/IconButton';
 import { linkRoutes } from 'core/router';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import SaveIcon from '@mui/icons-material/Save';
+import { Box } from '@mui/material';
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 
 interface Props {
-  character: Character
+  character: Character;
+  onSave: (character: Character) => void;
 }
 
 export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
-  const { character } = props;
+  const { character, onSave } = props;
   const navigate = useNavigate();
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image={character.image}
-        title={character.name}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="p">
-        <span>Id: </span>{character.id}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="p">
-        <span>Name: </span>{character.name}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="p">
-        <span>Status: </span>{character.status}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="p">
-        <span>Species: </span>{character.species}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="p">
-        <span>Location: </span>{character.location}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="p">
-        <span>Gender: </span>{character.gender}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <IconButton onClick={() => {navigate(linkRoutes.characterCollection);}}>
-          <ArrowBackIcon />
-          <span> Go back</span>
-        </IconButton>
-      </CardActions>
-    </Card>
+      <Formik
+        onSubmit={onSave}
+        initialValues={character}
+        enableReinitialize={true}
+        validate={formValidation.validateForm}
+      >
+        {() => (
+          <Form className={classes.root}>
+            <TextFieldComponent name="name" label="Name" />
+            <TextFieldComponent name="status" label="Status" />
+            <TextFieldComponent name="species" label="Species" />
+            <TextFieldComponent name="type" label="Type" />
+            <TextFieldComponent name="gender" label="Gender" />
+            <TextFieldComponent name="origin" label="Origin" />
+            <TextFieldComponent name="location" label="Location" />
+            <TextFieldComponent name="bestSentences" label="Best Sentences" />
+            <Box
+              m={1}
+              display="flex"
+              justifyContent="flex-end"
+              alignItems="flex-end">       
+              <Button variant="outlined" startIcon={<CancelOutlinedIcon />} onClick={() => {navigate(linkRoutes.characterCollection);}} sx={{ height: 40 }}>
+                Cancel
+              </Button>    
+              <Button type="submit" variant="contained" startIcon={<SaveIcon />} color="primary" sx={{ height: 40 }}>
+                Save
+              </Button>
+            </Box>
+          </Form>
+        )}
+      </Formik>
   );
 };

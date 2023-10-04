@@ -1,4 +1,5 @@
 export interface Character {
+  bestSentences: string,
   id: number;
   name: string;
   status: string;
@@ -11,6 +12,7 @@ export interface Character {
 }
 
 export const createEmptyCharacter = (): Character => ({
+  bestSentences: '',
   id: 0,
   name: '',
   status: '',

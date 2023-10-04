@@ -1,4 +1,5 @@
 export interface CharacterEntityVm {
+  bestSentences: string,
   id: number;
   name: string;
   status: string;

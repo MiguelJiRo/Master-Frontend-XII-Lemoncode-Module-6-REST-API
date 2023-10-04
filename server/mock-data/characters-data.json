@@ -1,20 +1,18 @@
 {
   "character": [
     {
-      "bestSentences": [],
+      "bestSentences": "miau miau miau",
       "id": 1,
       "name": "Rick Sanchez",
       "status": "Alive",
       "species": "Human",
-      "type": "",
+      "type": "Human",
       "gender": "Male",
       "origin": {
-        "name": "Earth (C-137)",
-        "url": "https://rickandmortyapi.com/api/location/1"
+        "name": "Earth (C-137)"
       },
       "location": {
-        "name": "Citadel of Ricks",
-        "url": "https://rickandmortyapi.com/api/location/3"
+        "name": "Citadel of Ricks"
       },
       "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
       "episode": [
@@ -74,7 +72,7 @@
       "created": "2017-11-04T18:48:46.250Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 2,
       "name": "Morty Smith",
       "status": "Alive",
@@ -82,12 +80,10 @@
       "type": "",
       "gender": "Male",
       "origin": {
-        "name": "unknown",
-        "url": ""
+        "name": "unknown"
       },
       "location": {
-        "name": "Citadel of Ricks",
-        "url": "https://rickandmortyapi.com/api/location/3"
+        "name": "Citadel of Ricks"
       },
       "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
       "episode": [
@@ -147,7 +143,7 @@
       "created": "2017-11-04T18:50:21.651Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 3,
       "name": "Summer Smith",
       "status": "Alive",
@@ -211,7 +207,7 @@
       "created": "2017-11-04T19:09:56.428Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 4,
       "name": "Beth Smith",
       "status": "Alive",
@@ -275,7 +271,7 @@
       "created": "2017-11-04T19:22:43.665Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 5,
       "name": "Jerry Smith",
       "status": "Alive",
@@ -336,7 +332,7 @@
       "created": "2017-11-04T19:26:56.301Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 6,
       "name": "Abadango Cluster Princess",
       "status": "Alive",
@@ -382,7 +378,7 @@
       "created": "2017-11-04T19:59:20.523Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 8,
       "name": "Adjudicator Rick",
       "status": "Dead",
@@ -405,7 +401,7 @@
       "created": "2017-11-04T20:03:34.737Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 9,
       "name": "Agency Director",
       "status": "Dead",
@@ -428,7 +424,7 @@
       "created": "2017-11-04T20:06:54.976Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 10,
       "name": "Alan Rails",
       "status": "Dead",
@@ -451,7 +447,7 @@
       "created": "2017-11-04T20:19:09.017Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 11,
       "name": "Albert Einstein",
       "status": "Dead",
@@ -474,7 +470,7 @@
       "created": "2017-11-04T20:20:20.965Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 12,
       "name": "Alexander",
       "status": "Dead",
@@ -497,7 +493,7 @@
       "created": "2017-11-04T20:32:33.144Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 13,
       "name": "Alien Googah",
       "status": "unknown",
@@ -520,7 +516,7 @@
       "created": "2017-11-04T20:33:30.779Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 14,
       "name": "Alien Morty",
       "status": "unknown",
@@ -543,7 +539,7 @@
       "created": "2017-11-04T20:51:31.373Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 15,
       "name": "Alien Rick",
       "status": "unknown",
@@ -566,7 +562,7 @@
       "created": "2017-11-04T20:56:13.215Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 16,
       "name": "Amish Cyborg",
       "status": "Dead",
@@ -589,7 +585,7 @@
       "created": "2017-11-04T21:12:45.235Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 17,
       "name": "Annie",
       "status": "Alive",
@@ -612,7 +608,7 @@
       "created": "2017-11-04T22:21:24.481Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 18,
       "name": "Antenna Morty",
       "status": "Alive",
@@ -636,7 +632,7 @@
       "created": "2017-11-04T22:25:29.008Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 19,
       "name": "Antenna Rick",
       "status": "unknown",
@@ -659,7 +655,7 @@
       "created": "2017-11-04T22:28:13.756Z"
     },
     {
-      "bestSentences": [],
+      "bestSentences": "",
       "id": 20,
       "name": "Ants in my Eyes Johnson",
       "status": "unknown",

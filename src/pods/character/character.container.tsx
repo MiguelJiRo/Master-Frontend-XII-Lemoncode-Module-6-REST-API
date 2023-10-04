@@ -5,6 +5,7 @@ import { createEmptyCharacter, Character } from './character.vm';
 import { mapCharacterFromApiToVm, mapCharacterFromVmToApi } from './character.mappers';
 import { Lookup } from 'common/models';
 import { CharacterComponent } from './character.component';
+import { linkRoutes } from 'core/router';
 
 export const CharacterContainer: React.FunctionComponent = (props) => {
   const [character, setCharacter] = React.useState<Character>(createEmptyCharacter());
@@ -12,9 +13,7 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
   const navigate = useNavigate();
 
   const handleLoadCharacter = async () => {
-    console.log('id' , id);
     const apiCharacter = await api.getCharacter(id);
-    console.log('apiCharacter' , apiCharacter);
     setCharacter(mapCharacterFromApiToVm(apiCharacter));
   };
 
@@ -24,5 +23,15 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
     }
   }, []);
 
-  return <CharacterComponent character={character}/>;
+  const handleSaveCharacter = async (character: Character) => {
+    const characterMapper = mapCharacterFromVmToApi(character);
+    const result = await api.saveCharacter(characterMapper);
+    if(result) {
+      navigate(linkRoutes.characterCollection);
+    } else {
+      alert('error saving character');
+    }
+  };
+
+  return <CharacterComponent character={character} onSave={handleSaveCharacter}/>;
 };

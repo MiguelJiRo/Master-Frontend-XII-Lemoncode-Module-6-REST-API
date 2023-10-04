@@ -1,4 +1,5 @@
 export interface Character {
+  bestSentences: string,
   id: number;
   name: string;
   status: string;
@@ -17,5 +18,4 @@ export interface Character {
   episode: string[];
   url: string;
   created: string;
-  bestSentences: string,
 }

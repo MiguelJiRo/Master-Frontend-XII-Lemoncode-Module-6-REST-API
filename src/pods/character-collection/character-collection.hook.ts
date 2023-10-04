@@ -12,12 +12,9 @@ export const useCharacterCollection = () => {
   const loadCharacterCollection = () => {
     getCharacterCollection().then((result) =>
     {
-      // const { info, results } = result;
-      console.log('character collection result 1#:', result);
       setCharacterCollection(mapToCollection(result, mapFromApiToVm))
     }).catch(
       error => {
-        console.log('Error getting character collection:', error);
         setCharacterCollection([]);
       }
     );

@@ -16,10 +16,13 @@ import InfoIcon from '@mui/icons-material/Info';
 interface Props {
   character: CharacterEntityVm;
   onDetail: (id: number) => void;
+  onEdit: (id: number) => void;
+  onDelete: (id: number) => void;
 }
+const auxiliarImagePath: string = 'https://rickandmortyapi.com/api/character/avatar/19.jpeg';
 
 export const CharacterCard: React.FunctionComponent<Props> = (props) => {
-  const { character, onDetail } = props;
+  const { character, onDetail, onEdit, onDelete } = props;
 
   return (
     <Card>
@@ -31,18 +34,27 @@ export const CharacterCard: React.FunctionComponent<Props> = (props) => {
       <CardContent>
         <div className={classes.content}>
           <CardMedia
-            image={character.image}
+            image={(character.image === "") ? auxiliarImagePath : character.image}
             title={character.name}
             style={{ height: 0, paddingTop: '56.25%' }}
           />
           <Typography variant="subtitle1" gutterBottom>
             {character.species}
           </Typography>
+          <Typography variant="subtitle2" gutterBottom>
+            Best sentences: {character.bestSentences}
+          </Typography>
         </div>
       </CardContent>
       <CardActions>
         <IconButton onClick={() => onDetail(character.id)}>
           <InfoIcon />
+        </IconButton>
+        <IconButton onClick={() => onEdit(character.id)}>
+          <EditIcon />
+        </IconButton>
+        <IconButton onClick={() => onDelete(character.id)}>
+          <DeleteIcon />
         </IconButton>
       </CardActions>
     </Card>
